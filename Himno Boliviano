@@ -4,14 +4,9 @@ using namespace std;
 
 int main()
 {
-    cout<<"Bolivianos: el hado propicio    
-coronó nuestros votos y anhelo;    
-es ya libre, ya libre este suelo,    
-ya cesó su servil condición.    
-Al estruendo marcial que ayer fuera    
-y al clamor de la guerra horroroso    
-siguen hoy, en contraste armonioso,    
-dulces himnos de paz y de unión. ";
-
+    cout<<"Bolivianos: el hado propicio"<<endl;
+    cout<<"coronó nuestros votos y anhelo"<<endl;
+    cout<<"es ya libre, ya libre este suelo, "<<endl;
+    cout<<"ya cesó su servil condición."<<endl;
     return 0;
 }
