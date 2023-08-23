@@ -1,0 +1,45 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    float a,b,c,d;
+    cout<<"ingresar el valor de a : ";cin>>a;
+    
+  
+    if(a==0)
+    cout<<"la ecuacion no tiene resultados"<<endl;
+    else 
+     cout<<"ingresar el valor de b : ";cin>>b;
+     cout<<"ingresar el valor de c : ";cin>>c;
+     d= b*b-4*a*c;
+    
+    
+    
+     if (d<0)
+     {
+     cout<<"la ecuacion tiene resultados imaginarios"<<endl;
+     float xR,xi;
+     xR= -b/(2*a);
+     xi= sqrt(-d)/(2*a);
+     cout<<"el resultado de la ecuacion es: "<<xR<<"+"<<xi<<"i"<<endl;
+     cout<<"el resultado de la ecuacion es: "<<xR<<"-"<<xi<<"i"<<endl;
+    }
+    else
+    if(d==0)
+    {
+        float x1,x2;
+        x1=-d/(2*a);
+        cout<<"la solucion unica es: "<<x1;
+    }
+    else
+    {
+        float x1,x2;
+        x1=(-b+sqrt(d))/(2*a);
+        x2=(-b-sqrt(d))/(2*a);
+        cout<<"la solucion de la ecuacion es"<<" x1= "<<x1<<" y "<<" x2= "<<x2<<endl;
+        
+    }
+    
+   
+}
