@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   int a, b, r, opcion;
+    cout<<"Ingresar a: ";
+    cin>>a;
+    cout<<"Ingresar b: ";
+    cin>>b;
+    cout<<"===MENU==="<<endl;
+    cout<<"1. SUMA"<<endl;
+    cout<<"2. RESTA"<<endl;
+    cout<<"3. MULTIPLICACION"<<endl;
+    cout<<"4. DIVISION"<<endl;
+    cout<<"==ELEGIR OPCION=="<<endl;
+    cin>>opcion;
+    switch(opcion)
+    {   case 1:r=a+b;
+        case 2:r=a-b;
+        case 3:r=a*b;
+        case 4:r=a/b;
+        default: cout<<"Opcion invalida"<<endl;
+    }    
+    cout<<"El resultado es: "<<r<<endl;    
+    return 0;
+}
