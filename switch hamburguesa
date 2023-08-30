@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   int a, opcion;
+    float r;
+    cout<<"Ingresar la cantidad: ";
+    cin>>a;
+    cout<<"=========MENU========="<<endl;
+    cout<<"1. HAMBURGUESA (3Bs)"<<endl;
+    cout<<"2. HAMBURGUESA CON QUESO (5Bs) "<<endl;
+    cout<<"3. PAPAS FRITAS (2Bs)"<<endl;
+    cout<<"4. SODA (2.5Bs)"<<endl;
+    cout<<"=====ELEGIR OPCION====="<<endl;
+    cin>>opcion;
+    switch(opcion)
+    {   case 1:r=3*a;break;
+        case 2:r=5*a;break;
+        case 3:r=2*a;break;
+        case 4:r=2.5*a;break;
+        default: cout<<"Opcion invalida"<<endl;
+    }
+    if ((1<=opcion)&&(opcion<=4))
+    cout<<"El Total de la compra es: "<<r<<endl;    
+    return 0;
+}
