@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int n1, n2, sum, cont, diferencia;
-    float prom;
+    int n1, n2, sum, cont;
+     float prom;
     do
     {
         cout << "Ingresar el numero inicial de la cuenta: "; cin >> n1;
@@ -17,14 +17,12 @@ int main()
     prom = 0;
     sum = 0;
     cont = n1;
-    diferencia = n2 - n1 + 1;
     while (cont <= n2)
     {
         sum = sum + cont;
-        n1 = n1 + 1;
         cont = cont + 1;
     }
-    prom = sum / diferencia;
+    prom = sum/(n2-n1+1);
     cout << "La suma total de todos los numeros es: " << sum << endl;
     cout << "El promedio total de todos los numeros es: " << prom;
 
