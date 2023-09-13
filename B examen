@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1, n2, sum, cont, diferencia;
+    float prom;
+    do
+    {
+        cout << "Ingresar el numero inicial de la cuenta: "; cin >> n1;
+    } while (n1 < 0);
+    do
+    {
+        cout << "Ingresar el numero final de la cuenta: "; cin >> n2;
+    } while (n2 < n1);
+    prom = 0;
+    sum = 0;
+    cont = n1;
+    diferencia = n2 - n1 + 1;
+    while (cont <= n2)
+    {
+        sum = sum + cont;
+        n1 = n1 + 1;
+        cont = cont + 1;
+    }
+    prom = sum / diferencia;
+    cout << "La suma total de todos los numeros es: " << sum << endl;
+    cout << "El promedio total de todos los numeros es: " << prom;
+
+
+
+    return 0;
+}
