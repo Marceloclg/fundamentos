@@ -1,22 +1,31 @@
 #include <iostream>
-
 using namespace std;
-
 int main()
 { float p1, p2, p3, ef, pf, nt;
   int n;
     do 
-    {cout<<"Ingresar la cantidad de alumnos: "; cin>>n;
+    {   cout<<"Ingresar la cantidad de alumnos: "; cin>>n;
     }while (n<=0);
     for (int c=1; c<=n; c++)
-    {cout<<"Alumno "<<c<<endl;
-     cout<<"Ingresar las notas de los tres parciales: ";cin>>p1>>p2>>p3;
-     cout<<"Ingresar la nota del examen final: ";cin>>ef;
-     cout<<"Ingresar la nota del proyecto final: ";cin>>pf;
-     nt= (((p1+p2+p3)/3)*0.4+ (ef*0.4)+ (pf*0.2));
-     cout<<"La nota final del alumno "<<c<<" es de: "<<nt<<endl;
+    {   cout<<"Alumno "<<c<<endl;
+        cout<<"Ingresar la nota del primer parcial: ";cin>>p1;
+        while ((p1<0)||(p1>100))
+            {cout<<"Ingresar la nota del primer parcial: ";cin>>p1;}
+        cout<<"Ingresar la nota del segundo parcial: ";cin>>p2;
+        while ((p2<0)||(p2>100))
+            {cout<<"Ingresar la nota del segundo parcial: ";cin>>p2;}
+        cout<<"Ingresar la nota del tercer parcial: ";cin>>p3;
+        while ((p3<0)||(p3>100))
+            {cout<<"Ingresar la nota del tercer parcial: ";cin>>p3;}
+        cout<<"Ingresar la nota del examen final: ";cin>>ef;
+        while ((ef<0)||(ef>100))
+            {cout<<"Ingresar la nota del examen final: ";cin>>ef;}
+        cout<<"Ingresar la nota del proyecto final: ";cin>>pf;
+        while ((pf<0)||(pf>100))
+            {cout<<"Ingresar la nota del proyecto final: ";cin>>pf;}
+        nt= (((p1+p2+p3)/3)*0.4+ (ef*0.4)+ (pf*0.2));
+        cout<<"La nota final del alumno "<<c<<" es de: "<<nt<<endl;
+        cout<<" "<<endl;
     }
-     
-
     return 0;
 }
