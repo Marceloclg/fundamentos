@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int N, c=1, p=1;
+    do {
+        cout << "Ingresar la cantidad de numero enteros: "; cin >> N;
+    } while (N <= 0);
+    for (c=1; c<=N; c++)
+    {
+        p = p * c;
+    }
+    cout << "El producto de los numeros es: " << p;
+}
