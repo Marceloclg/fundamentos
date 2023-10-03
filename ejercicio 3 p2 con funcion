@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int sumatoria(int n);
+int main()
+{   int n, f;
+    cout<<"Ingrese el numero n: ";cin>>n;
+    f=sumatoria(n);
+    cout<<"La suma de l,os cuadrados de los "<<n<<" es: "<<f;
+
+    return 0;
+}
+int sumatoria(int n){   
+    int x=1;
+    for (float i=1; i<=n; i++){
+    x= x+ pow(i,2) ;
+    }
+    return x;
+}
