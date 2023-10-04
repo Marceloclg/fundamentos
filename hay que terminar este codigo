@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int cuadrado(int n);
+int cubo(int n);
+int cuarta(int n);
+int main()
+{
+    int opcion,n;
+    cout << "Ingresa un numero para elevarlo: "; cin >> n;
+    cout << "MENU"<<endl;
+    cout << "1. CUADRADO" << endl;
+    cout << "2. CUBO" << endl;
+    cout << "3. CUARTA POTENCIA" << endl;
+    cout << "Escoge la opcion: "; cin >> opcion;
+    switch (opcion) {
+    case 1: cuadrado(n); break;
+    case 2: cubo(n); break;
+    case 3: cuarta(n); break;
+    case 0: 
+    default: "No existe esa opcion";
+    }
+    cout << "El resultado es: ";
+}
+int cuadrado(int n)
+{
+    return pow(n, 2);
+}
+int cubo(int n)
+{
+    return pow(n, 3);
+}
+int cuarta(int n)
+{
+    return pow(n, 4);
+}
