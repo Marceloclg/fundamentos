@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int digitos(int n);
+int sumas(int digitos(int n));
+int main()
+{
+	int n,z ;
+	cout << "Ingrese un numero : "; cin >> n;
+	cout << "El factorial de " << n << " es: " << z;
+}
+int digitos(int n) 
+{
+	return n%10;
+}
+int suma(int n)
+{	
+	int z=0;
+	while (n > 0)
+		z = z + digitos(n);
+	return z;
+}
