@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+
+//repeticion con do while 
+{   
+	char resp;
+	float precio, descuento, precioFinal, suma = 0;
+	do {
+		cout << "introduzca el precio: ";
+		cin >> precio;
+		cout << "introduzca el porcentaje de descueto: ";
+		cin >> descuento;
+		precioFinal = precio - (precio * (descuento / 100));
+		suma += precioFinal;
+		cout << "el precio final con descuento es de : " << precioFinal << endl;
+		return 0;
+	} while ((resp== 's')||(resp=='S'));
+	cout << "el monto total es: " << suma << endl;
+	return 0;
+
+}
