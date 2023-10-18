@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+
+
+// repeticion con for
+
+{
+	float precio, descuento, precioFinal, suma = 0, numero;
+	cout << "ingresar el numero de productos: ";
+	cin >> numero;
+	for (int i = 0; i <= numero; i++)
+	{
+		cout << "introduzca el precio: ";
+		cin >> precio;
+		cout << "introduzca el porcentaje de descueto: ";
+		cin >> descuento;
+		precioFinal = precio - (precio * (descuento / 100));
+		suma += precioFinal;
+		cout << "el precio final con descuento es de : " << precioFinal << endl;
+	}
+	cout << "el monto total es:  " << suma << endl;
+		return 0;
+
+}
