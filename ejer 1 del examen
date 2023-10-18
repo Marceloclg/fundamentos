@@ -1,0 +1,35 @@
+//MARCELO LEAÑO
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int op, compra;
+	float sumcompra=0, sumdesc=0, desc;
+	do {
+		cout << "1. COMPRAR"<<endl;
+		cout << "0. SALIR"<<endl;
+		cout << "Ingrese la opcion: "<<endl; cin >> op;
+		switch (op)
+		{
+		case 1:cout << "Ingresa el monto total de la compra: "; cin >> compra;
+			if (compra <= 100)
+				desc = compra;
+			else if ((compra > 100) || (compra < 500))
+				desc = compra * 0.965;
+			else if ((compra > 500) || (compra < 1000))
+				desc = compra * 0.915;
+			else
+				desc = compra * 0.88;
+			sumcompra = sumcompra + compra;
+			sumdesc = sumdesc + desc;
+			break;
+		case 0:cout << "Gracias por comprar"<<endl; break;
+		default:cout << "Vuelve a escoger la opcion"<<endl; break;
+		}
+	} while (op != 0);
+	cout << "El total de las compras es de: " << sumcompra<<endl;
+	cout << "El total de las compras con descuento es de: " << sumdesc << endl;
+	cout << "El total de compras menos el descuento es de: " << sumcompra - sumdesc << endl;
+
+}
