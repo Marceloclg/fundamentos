@@ -1,0 +1,52 @@
+//EJERCICIO 7 - Marcelo Leaño, Jose Daniel Rivero y Lucas Mendez
+#include <iostream>
+using namespace std;
+
+string unidades[] = {"CERO", "UNO", "DOS", "TRES", "CUATRO", "CINCO", "SEIS", "SIETE", "OCHO", "NUEVE"};
+string especiales[] = {"DIEZ", "ONCE", "DOCE", "TRECE", "CATORCE", "QUINCE", "DIECISÉIS", "DIECISIETE", "DIECIOCHO", "DIECINUEVE"};
+string decenas[] = {"", "", "VEINTE", "TREINTA", "CUARENTA", "CINCUENTA", "SESENTA", "SETENTA", "OCHENTA", "NOVENTA"};
+string centenas[] = {"", "CIENTO", "DOSCIENTOS", "TRESCIENTOS", "CUATROCIENTOS", "QUINIENTOS", "SEISCIENTOS", "SETECIENTOS", "OCHOCIENTOS", "NOVECIENTOS"};
+
+string convertirLiteral(int numero);
+int main() {
+    int numero;
+    cout << "Ingrese un número entero: ";
+    cin >> numero;
+
+    cout << "El valor escrito literalmente es: " << convertirLiteral(numero) << endl;
+
+    return 0;
+}
+
+string convertirLiteral(int numero) {
+    if (numero < 20) {
+        if (numero < 10) {
+            return unidades[numero];
+        } else {
+            return especiales[numero - 10];
+        }
+    } else if (numero < 100) {
+        int decena = numero / 10;
+        int unidad = numero % 10;
+
+        if (unidad == 0) {
+            return decenas[decena];
+        } else {
+            return decenas[decena] + " Y " + unidades[unidad];
+        }
+    } else if (numero < 1000) {
+        int centena = numero / 100;
+        int decena = (numero / 10) % 10;
+        int unidad = numero % 10;
+
+        if (decena == 0 && unidad == 0) {
+            return centenas[centena];
+        } else if (decena == 0) {
+            return centenas[centena] + " " + unidades[unidad];
+        } else {
+            return centenas[centena] + " " + convertirLiteral(decena * 10 + unidad);
+        }
+    } else {
+        return "Número fuera de rango";
+    }
+}
