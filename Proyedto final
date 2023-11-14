@@ -1,0 +1,88 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct Usuario {
+    string nombre;
+    string email;
+};
+
+struct DatosEnergia {
+   
+    void obtenerDatosEnergia(Usuario usuario) {
+        cout << "Obteniendo datos de consumo de energía para " << usuario.nombre << "..." << endl;
+    }
+};
+
+struct Recomendaciones {
+    
+    void proporcionarRecomendaciones(Usuario usuario) {
+        cout << "Proporcionando recomendaciones para " << usuario.nombre << "..." << endl;
+    }
+};
+
+struct Configuracion {
+    
+    void mostrarConfiguracion(Usuario usuario) {
+        cout << "Mostrando configuración para " << usuario.nombre << "..." << endl;
+    }
+};
+
+class InterfazUsuario {
+public:
+    int obtenerOpcionUsuario() {
+        int opcion;
+        cout << "\nMenú:\n"
+                "1. Monitorizar consumo de energía\n"
+                "2. Obtener recomendaciones\n"
+                "3. Configuración\n"
+                "4. Salir\n"
+                "Seleccione una opción: ";
+        cin >> opcion;
+        return opcion;
+    }
+};
+
+class GestionEnergiaApp {
+public:
+    void ejecutar() {
+        cout << "¡Bienvenido a la aplicación de gestión de energía!" << endl;
+
+        Usuario usuario; 
+        usuario.nombre = "Usuario Ejemplo";
+
+        DatosEnergia datosEnergia;
+        Recomendaciones recomendaciones;
+        Configuracion configuracion;
+        InterfazUsuario interfazUsuario;
+
+        while (true) {
+            int opcion = interfazUsuario.obtenerOpcionUsuario();
+
+            switch (opcion) {
+                case 1:
+                    datosEnergia.obtenerDatosEnergia(usuario);
+                    break;
+                case 2:
+                    recomendaciones.proporcionarRecomendaciones(usuario);
+                    break;
+                case 3:
+                    configuracion.mostrarConfiguracion(usuario);
+                    break;
+                case 4:
+                    cout << "Gracias por usar nuestra aplicación. ¡Hasta luego!" << endl;
+                    return;
+                default:
+                    cout << "Opción no válida. Por favor, elija nuevamente." << endl;
+            }
+        }
+    }
+};
+
+int main() {
+    GestionEnergiaApp app;
+    app.ejecutar();
+
+    return 0;
+}
